@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import puppeteer from 'puppeteer';
+import chromium from 'chrome-aws-lambda'; // Usado para o ambiente serverless
+import puppeteer from 'puppeteer-core'; // puppeteer-core para serverless
 
 export const runtime = 'nodejs';
 
@@ -7,10 +8,19 @@ export async function POST(req: NextRequest) {
   try {
     const { language } = await req.json();
 
-    const browser = await puppeteer.launch({
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-      headless: true,
-    });
+    const options = process.env.AWS_LAMBDA_FUNCTION_VERSION
+      ? {
+          args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
+          defaultViewport: chromium.defaultViewport,
+          executablePath: await chromium.executablePath,
+          headless: chromium.headless,
+        }
+      : {
+          args: ['--no-sandbox', '--disable-setuid-sandbox'],
+          headless: true,
+        };
+
+    const browser = await puppeteer.launch(options);
     const page = await browser.newPage();
 
     // Construir a URL completa para a renderização
