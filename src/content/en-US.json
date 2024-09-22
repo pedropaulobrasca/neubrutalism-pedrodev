@@ -1,0 +1,119 @@
+{
+  "name": "Pedro Paulo Brasca Trevisanuto",
+  "title": "FullStack Developer",
+  "dob": "Date of birth: 06/08/94, 30 years old",
+  "address": "Address: Taubaté - SP, Brazil",
+  "phone": "Phone: +55 12 99718-3660",
+  "email": "Email: pedropaulobrasca@gmail.com",
+  "education": {
+    "title": "Education",
+    "degree": "Bachelor of Computer Systems Analysis",
+    "university": "Paulista University",
+    "graduationDate": "Graduation date: 2021"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "jobs": [
+      {
+        "company": "Tinnova",
+        "role": "FullStack Developer (Back-end Focus)",
+        "period": "June 2022 – Present",
+        "activities": "Main Activities: Fullstack development focusing on back-end using Node.js, Express, Sequelize, and PostgreSQL. Front-end work with Angular."
+      },
+      {
+        "company": "B2ML Sistemas",
+        "role": "FullStack Developer (React and Next.js on Front-end)",
+        "period": "March 2021 – June 2022",
+        "activities": "Main activities: Fullstack development with NestJS on the back-end and ReactJS on the front-end."
+      },
+      {
+        "company": "Thompson Management Horizons",
+        "role": "FullStack Developer Intern",
+        "period": "February 2020 – March 2021",
+        "activities": "Main activities: Development of fullstack web applications using PHP and MySQL."
+      },
+      {
+        "company": "Virtua Brasil",
+        "role": "FullStack Developer Intern",
+        "period": "December 2019 – February 2020",
+        "activities": "Main activities: Fullstack development primarily using PHP and MySQL to create and maintain web applications."
+      }
+    ]
+  },
+  "courses": {
+    "title": "Courses and Improvements",
+    "list": [
+      {
+        "name": "Node.js API with SOLID",
+        "provider": "Rocketseat - Online",
+        "duration": "Duration: 9h 27min",
+        "content": "Content: SOLID concepts, Design Patterns, Docker, JWT and Refresh TOKEN, RBAC, and Testing."
+      },
+      {
+        "name": "DDD in Node.js",
+        "provider": "Rocketseat - Online",
+        "duration": "Duration: 7h 53min",
+        "content": "Content: Fundamentals of Domain-Driven Design and Clean Architecture in a REST API for a forum."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "list": [
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "React",
+      "Next.js",
+      "NestJS",
+      "Express",
+      "Fastify",
+      "Docker",
+      "Git",
+      "Heroku",
+      "Jira",
+      "PostgreSQL",
+      "MySQL",
+      "Sequelize",
+      "Prisma",
+      "DDD",
+      "Clean Architecture",
+      "TDD",
+      "Unit Testing",
+      "Integration",
+      "E2E",
+      "CI/CD",
+      "Clean Code"
+    ]
+  },
+  "softSkills": {
+    "title": "Soft Skills",
+    "list": [
+      "Effective communication",
+      "Teamwork",
+      "Problem-solving",
+      "Adaptability",
+      "Time management",
+      "Critical thinking",
+      "Leadership",
+      "Creativity"
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "list": [
+      {
+        "name": "Task Management System",
+        "description": "Fullstack web application for team task management, using React, Node.js, and PostgreSQL."
+      },
+      {
+        "name": "E-commerce API",
+        "description": "RESTful API for an e-commerce platform, implemented with NestJS and MongoDB."
+      },
+      {
+        "name": "Data Analysis Dashboard",
+        "description": "Interactive dashboard for sales data visualization, built with Angular and D3.js."
+      }
+    ]
+  }
+}

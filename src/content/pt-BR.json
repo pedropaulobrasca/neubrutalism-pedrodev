@@ -1,0 +1,119 @@
+{
+  "name": "Pedro Paulo Brasca Trevisanuto",
+  "title": "Desenvolvedor FullStack",
+  "dob": "Data de nascimento: 08/06/94, 30 anos",
+  "address": "Endereço: Taubaté - SP",
+  "phone": "Telefone: (12) 99718-3660",
+  "email": "Email: pedropaulobrasca@gmail.com",
+  "education": {
+    "title": "Formação Acadêmica",
+    "degree": "Análise de Sistemas de Computação - Bacharelado",
+    "university": "Universidade Paulista",
+    "graduationDate": "Data de conclusão: 2021"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "jobs": [
+      {
+        "company": "Tinnova",
+        "role": "Desenvolvedor FullStack (Foco no Back-end)",
+        "period": "Junho de 2022 – Até o momento",
+        "activities": "Principais Atividades: Desenvolvimento fullstack com foco no back-end utilizando Node.js, Express, Sequelize e PostgreSQL. Trabalho no front-end com Angular."
+      },
+      {
+        "company": "B2ML Sistemas",
+        "role": "Desenvolvedor FullStack (React e Next.js no Front-end)",
+        "period": "Março de 2021 – Junho de 2022",
+        "activities": "Principais atividades: Desenvolvimento fullstack com NestJS no back-end e ReactJS no front-end."
+      },
+      {
+        "company": "Thompson Management Horizons",
+        "role": "Estagiário Desenvolvedor FullStack",
+        "period": "Fevereiro de 2020 – Março de 2021",
+        "activities": "Principais atividades: Desenvolvimento de aplicações web fullstack utilizando PHP e MySQL."
+      },
+      {
+        "company": "Virtua Brasil",
+        "role": "Estagiário Desenvolvedor FullStack",
+        "period": "Dezembro de 2019 – Fevereiro de 2020",
+        "activities": "Principais atividades: Desenvolvimento fullstack utilizando principalmente PHP e MySQL para criar e manter aplicações web."
+      }
+    ]
+  },
+  "courses": {
+    "title": "Cursos e Aprimoramentos",
+    "list": [
+      {
+        "name": "API Node.js com SOLID",
+        "provider": "Rocketseat - Online",
+        "duration": "Carga horária: 9h 27min",
+        "content": "Conteúdo: Conceitos do SOLID, Design Patterns, Docker, JWT e Refresh TOKEN, RBAC e Testes."
+      },
+      {
+        "name": "DDD no Node.js",
+        "provider": "Rocketseat - Online",
+        "duration": "Carga horária: 7h 53min",
+        "content": "Conteúdo: Fundamentos de Domain-Driven Design e Clean Architecture em uma API Rest para forum."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Habilidades Técnicas",
+    "list": [
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "React",
+      "Next.js",
+      "NestJS",
+      "Express",
+      "Fastify",
+      "Docker",
+      "Git",
+      "Heroku",
+      "Jira",
+      "PostgreSQL",
+      "MySQL",
+      "Sequelize",
+      "Prisma",
+      "DDD",
+      "Clean Architecture",
+      "TDD",
+      "Testes Unitários",
+      "Integração",
+      "E2E",
+      "CI/CD",
+      "Clean Code"
+    ]
+  },
+  "softSkills": {
+    "title": "Habilidades Interpessoais",
+    "list": [
+      "Comunicação efetiva",
+      "Trabalho em equipe",
+      "Resolução de problemas",
+      "Adaptabilidade",
+      "Gerenciamento de tempo",
+      "Pensamento crítico",
+      "Liderança",
+      "Criatividade"
+    ]
+  },
+  "projects": {
+    "title": "Projetos Destacados",
+    "list": [
+      {
+        "name": "Sistema de Gerenciamento de Tarefas",
+        "description": "Aplicação web fullstack para gerenciamento de tarefas em equipe, utilizando React, Node.js e PostgreSQL."
+      },
+      {
+        "name": "API de E-commerce",
+        "description": "API RESTful para uma plataforma de e-commerce, implementada com NestJS e MongoDB."
+      },
+      {
+        "name": "Dashboard de Análise de Dados",
+        "description": "Dashboard interativo para visualização de dados de vendas, construído com Angular e D3.js."
+      }
+    ]
+  }
+}
