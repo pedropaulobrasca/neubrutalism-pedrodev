@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 import Header from '@/components/header/header'
-import html2canvas from 'html2canvas'
-import jsPDF from 'jspdf'
 import PersonalInfo from '@/components/sections/personal-info'
 import EducationalInfo from '@/components/sections/educational-info'
 import ExperienceInfo from '@/components/sections/experience-info'
@@ -24,31 +22,31 @@ export default function EnhancedNeubrutalismCurriculum() {
 
   const styles: Styles = getStyles(isDarkMode);
 
-  const exportToPDF = () => {
-    const input = document.getElementById('curriculum');
-
-    if (input) {
-      html2canvas(input).then((canvas) => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('p', 'mm', 'a4');
-        const imgWidth = 210;
-        const pageHeight = 297;
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-        let heightLeft = imgHeight;
-        let position = 0;
-
-        pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
-
-        while (heightLeft >= 0) {
-          position = heightLeft - imgHeight;
-          pdf.addPage();
-          pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-          heightLeft -= pageHeight;
-        }
-
-        pdf.save('curriculum.pdf');
+  const exportToPDF = async () => {
+    try {
+      const response = await fetch('/api/export-pdf', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ language }),
       });
+
+      if (!response.ok) {
+        throw new Error('Erro ao gerar o PDF');
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(new Blob([blob]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'curriculum.pdf');
+      document.body.appendChild(link);
+      link.click();
+      link.parentNode?.removeChild(link);
+    } catch (error) {
+      console.error('Erro ao exportar PDF:', error);
+      alert('Ocorreu um erro ao gerar o PDF. Por favor, tente novamente.');
     }
   }
 
