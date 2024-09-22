@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import chromium from 'chrome-aws-lambda'; // Usado para o ambiente serverless
-import puppeteer from 'puppeteer-core'; // puppeteer-core para serverless
+import puppeteer from 'puppeteer-core'; // Usado tanto no serverless quanto localmente
+import chromium from '@sparticuz/chromium'; // Usado apenas para o ambiente serverless
+import { execPath } from 'process'; // Para identificar local ou serverless
 
 export const runtime = 'nodejs';
 
@@ -8,19 +9,30 @@ export async function POST(req: NextRequest) {
   try {
     const { language } = await req.json();
 
-    const options = process.env.AWS_LAMBDA_FUNCTION_VERSION
-      ? {
-          args: [...chromium.args, '--hide-scrollbars', '--disable-web-security'],
-          defaultViewport: chromium.defaultViewport,
-          executablePath: await chromium.executablePath,
-          headless: chromium.headless,
-        }
-      : {
-          args: ['--no-sandbox', '--disable-setuid-sandbox'],
-          headless: true,
-        };
+    // Verifica se está rodando no ambiente da Vercel (serverless)
+    const isServerless = !!process.env.AWS_LAMBDA_FUNCTION_VERSION;
 
-    const browser = await puppeteer.launch(options);
+    console.log(isServerless)
+
+    let browser;
+    if (isServerless) {
+      // No ambiente serverless (Vercel), usar @sparticuz/chromium
+      const executablePath = await chromium.executablePath();
+      browser = await puppeteer.launch({
+        args: chromium.args,
+        defaultViewport: chromium.defaultViewport,
+        executablePath, // Caminho do Chromium para serverless
+        headless: chromium.headless,
+      });
+    } else {
+      // No ambiente local, usar o Puppeteer completo
+      browser = await puppeteer.launch({
+        executablePath: execPath, // Usar o caminho do Puppeteer instalado localmente
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        headless: true,
+      });
+    }
+
     const page = await browser.newPage();
 
     // Construir a URL completa para a renderização
@@ -32,6 +44,7 @@ export async function POST(req: NextRequest) {
       waitUntil: 'networkidle0',
     });
 
+    // Gerar o PDF
     const pdfBuffer = await page.pdf({
       format: 'A4',
       printBackground: true,
