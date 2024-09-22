@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import puppeteer from 'puppeteer';
 
+export const runtime = 'nodejs';
+
 export async function POST(req: NextRequest) {
   try {
     const { language } = await req.json();
@@ -45,8 +47,3 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Erro ao gerar PDF' }, { status: 500 });
   }
 }
-
-// Opcional: Limitar métodos permitidos
-export const config = {
-  runtime: 'nodejs',
-};

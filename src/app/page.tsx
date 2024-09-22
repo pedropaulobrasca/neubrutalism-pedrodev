@@ -40,7 +40,7 @@ export default function EnhancedNeubrutalismCurriculum() {
       const url = window.URL.createObjectURL(new Blob([blob]));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'curriculum.pdf');
+      link.setAttribute('download', 'Pedro Paulo B Trevisanuto.pdf');
       document.body.appendChild(link);
       link.click();
       link.parentNode?.removeChild(link);
