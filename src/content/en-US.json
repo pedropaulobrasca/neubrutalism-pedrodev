@@ -7,7 +7,7 @@
   "email": "Email: pedropaulobrasca@gmail.com",
   "education": {
     "title": "Education",
-    "degree": "Bachelor of Computer Systems Analysis",
+    "degree": "Computer Systems Analysis",
     "university": "Paulista University",
     "graduationDate": "Graduation date: 2021"
   },
@@ -103,16 +103,14 @@
     "title": "Featured Projects",
     "list": [
       {
-        "name": "Task Management System",
-        "description": "Fullstack web application for team task management, using React, Node.js, and PostgreSQL."
+        "name": "This Portfolio",
+        "description": "Web application using NextJS",
+        "link": "https://pedrodev.com.br/"
       },
       {
-        "name": "E-commerce API",
-        "description": "RESTful API for an e-commerce platform, implemented with NestJS and MongoDB."
-      },
-      {
-        "name": "Data Analysis Dashboard",
-        "description": "Interactive dashboard for sales data visualization, built with Angular and D3.js."
+        "name": "Freelance Jobs Calculator",
+        "description": "Web application using NextJS",
+        "link": "https://freela-calc.pedrodev.com.br/"
       }
     ]
   }

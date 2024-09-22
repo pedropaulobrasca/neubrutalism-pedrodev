@@ -68,6 +68,7 @@ export interface Projects {
 export interface Project {
   name: string;
   description: string;
+  link: string;
 }
 
 export interface Styles {

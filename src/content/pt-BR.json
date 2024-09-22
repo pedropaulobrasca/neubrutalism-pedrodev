@@ -7,7 +7,7 @@
   "email": "Email: pedropaulobrasca@gmail.com",
   "education": {
     "title": "Formação Acadêmica",
-    "degree": "Análise de Sistemas de Computação - Bacharelado",
+    "degree": "Análise de Sistemas de Computação",
     "university": "Universidade Paulista",
     "graduationDate": "Data de conclusão: 2021"
   },
@@ -103,16 +103,14 @@
     "title": "Projetos Destacados",
     "list": [
       {
-        "name": "Sistema de Gerenciamento de Tarefas",
-        "description": "Aplicação web fullstack para gerenciamento de tarefas em equipe, utilizando React, Node.js e PostgreSQL."
+        "name": "Este portifólio",
+        "description": "Aplicação web utilizando NextJS",
+        "link": "https://pedrodev.com.br/"
       },
       {
-        "name": "API de E-commerce",
-        "description": "API RESTful para uma plataforma de e-commerce, implementada com NestJS e MongoDB."
-      },
-      {
-        "name": "Dashboard de Análise de Dados",
-        "description": "Dashboard interativo para visualização de dados de vendas, construído com Angular e D3.js."
+        "name": "Calculadora de Jobs Freela",
+        "description": "Aplicação web utilizando NextJS",
+        "link": "https://freela-calc.pedrodev.com.br/"
       }
     ]
   }
