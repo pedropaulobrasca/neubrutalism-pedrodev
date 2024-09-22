@@ -1,8 +1,9 @@
 import { Card } from "@/components/ui/card";
+import { LanguageContent, Styles } from "@/types";
 
 interface PersonalInfoProps {
-  content: any;
-  styles: any;
+  content: LanguageContent;
+  styles: Styles;
 }
 
 export default function PersonalInfo({ content, styles }: PersonalInfoProps) {
