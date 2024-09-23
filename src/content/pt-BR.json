@@ -54,6 +54,7 @@
   "skills": {
     "title": "Habilidades Técnicas",
     "list": [
+      "Node.js",
       "TypeScript",
       "JavaScript",
       "SQL",
@@ -72,6 +73,8 @@
       "Prisma",
       "DDD",
       "Clean Architecture",
+      "Jest",
+      "Vistest",
       "TDD",
       "Testes Unitários",
       "Integração",
